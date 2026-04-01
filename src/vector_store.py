@@ -29,7 +29,7 @@ def create_vector_db(chunks, embeddings):
     import numpy as np
     from langchain_community.vectorstores import FAISS
     from langchain_community.docstore.in_memory import InMemoryDocstore
-    from langchain.schema import Document
+    from langchain_core.documents import Document
     
     dim = len(all_embeddings[0])
     index = faiss.IndexFlatL2(dim)
