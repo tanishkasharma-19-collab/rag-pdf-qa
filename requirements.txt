@@ -9,4 +9,3 @@ pymupdf
 Pillow
 groq
 python-dotenv
-fastembed
