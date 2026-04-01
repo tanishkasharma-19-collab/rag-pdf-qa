@@ -1,5 +1,5 @@
 def retrieve_docs(db, query):
-    docs = db.similarity_search(query, k=3)
+    docs = db.similarity_search(query, k=5)  # increased from 3 → 5 chunks
 
     print("\n--- Retrieved Context ---")
     for i, d in enumerate(docs):
