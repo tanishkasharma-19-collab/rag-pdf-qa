@@ -1,4 +1,3 @@
-from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
 import os
 from dotenv import load_dotenv
