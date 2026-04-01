@@ -2,13 +2,12 @@ streamlit
 langchain
 langchain-community
 langchain-core
-langchain-huggingface
 langchain-text-splitters
 faiss-cpu
 pypdf
 pymupdf
 Pillow
-sentence-transformers==2.2.2
-torch==2.0.1
 groq
 python-dotenv
+openai
+langchain-openai
