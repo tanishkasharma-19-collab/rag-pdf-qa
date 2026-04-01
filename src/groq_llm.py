@@ -14,9 +14,11 @@ def generate_answer_groq(query, docs):
 Instructions:
 - Give a detailed and complete answer using the context below
 - Follow any formatting instructions in the question (e.g. word limits, bullet points, summary)
+- The document may use different section names — for example "Discussion" or "Summary" instead of "Conclusion", or "Results" instead of "Findings". Look for the meaning, not just the exact word.
+- If asked about conclusions, also look at discussion, summary, findings, and results sections in the context
+- If asked to summarize, give a thorough overview of all key points
 - If the answer spans multiple points, explain each one clearly
-- If the answer is not found in the context, say "I couldn't find relevant information in the document."
-- Never make up information that isn't in the context
+- Only say "I couldn't find relevant information" if the topic is truly not mentioned anywhere in the context
 
 Context:
 {context}
@@ -31,7 +33,7 @@ Answer:"""
             {"role": "user", "content": prompt}
         ],
         model="llama-3.1-8b-instant",
-        max_tokens=1024  # increased from default to allow longer answers
+        max_tokens=1024
     )
 
     return chat.choices[0].message.content
