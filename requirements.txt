@@ -9,5 +9,5 @@ pymupdf
 Pillow
 groq
 python-dotenv
-openai
-langchain-openai
+requests
+numpy
