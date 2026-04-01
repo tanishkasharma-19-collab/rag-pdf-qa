@@ -9,5 +9,4 @@ pymupdf
 Pillow
 groq
 python-dotenv
-requests
-numpy
+fastembed
